@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ChevronDown, ExternalLink, Package, Cpu, BookOpen, Wrench } from "lucide-react";
 
 interface CourseLink {
@@ -46,6 +47,7 @@ const CourseCard = ({
   links,
 }: CourseCardProps) => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   const c = colorMap[color];
 
   return (
@@ -96,17 +98,14 @@ const CourseCard = ({
 
           <div className="flex flex-wrap gap-2 pt-2">
             {links.map((link, i) => (
-              <a
+              <button
                 key={i}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => navigate(link.url)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${c.badge} hover:opacity-90`}
               >
                 {link.icon}
                 {link.label}
-                <ExternalLink className="w-3 h-3" />
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -133,10 +132,10 @@ export const wedoCourse: CourseCardProps = {
     "Лоток-сортировщик и наклейки",
   ],
   links: [
-    { label: "Детали набора", url: "#wedo-details", icon: <Package className="w-3 h-3" /> },
-    { label: "Тех. характеристики", url: "#wedo-tech", icon: <Cpu className="w-3 h-3" /> },
-    { label: "Перейти к курсу", url: "#wedo-course", icon: <BookOpen className="w-3 h-3" /> },
-    { label: "Инструкции сборки", url: "#wedo-builds", icon: <Wrench className="w-3 h-3" /> },
+    { label: "Детали набора", url: "/wedo#details", icon: <Package className="w-3 h-3" /> },
+    { label: "Тех. характеристики", url: "/wedo#tech", icon: <Cpu className="w-3 h-3" /> },
+    { label: "Перейти к курсу", url: "/wedo#course", icon: <BookOpen className="w-3 h-3" /> },
+    { label: "Инструкции сборки", url: "/wedo#builds", icon: <Wrench className="w-3 h-3" /> },
   ],
 };
 
@@ -156,9 +155,9 @@ export const spikeCourse: CourseCardProps = {
     "Перезаряжаемая батарея",
   ],
   links: [
-    { label: "Детали набора", url: "#spike-details", icon: <Package className="w-3 h-3" /> },
-    { label: "Тех. характеристики", url: "#spike-tech", icon: <Cpu className="w-3 h-3" /> },
-    { label: "Перейти к курсу", url: "#spike-course", icon: <BookOpen className="w-3 h-3" /> },
-    { label: "Инструкции сборки", url: "#spike-builds", icon: <Wrench className="w-3 h-3" /> },
+    { label: "Детали набора", url: "/spike#details", icon: <Package className="w-3 h-3" /> },
+    { label: "Тех. характеристики", url: "/spike#tech", icon: <Cpu className="w-3 h-3" /> },
+    { label: "Перейти к курсу", url: "/spike#course", icon: <BookOpen className="w-3 h-3" /> },
+    { label: "Инструкции сборки", url: "/spike#builds", icon: <Wrench className="w-3 h-3" /> },
   ],
 };
