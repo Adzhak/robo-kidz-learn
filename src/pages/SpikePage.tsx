@@ -253,18 +253,18 @@ const SpikePage = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { name: "Танцор (Break Dancer)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt55dd0b3793177261/5f880233e53bb90f6c283622/break-dance-bi-pdf-book1of2.pdf?locale=en-us" },
-              { name: "Тренер (The Coach)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt23cdd348ed896466/5f8802a5d041c37a4af70694/coach-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Собачка Кики (Kiki)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt2423455cd4b1ce39/5f88029ef4c5ce0e93db159b/help-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Прыгун (Hopper)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt94f5015eec2dae38/5f88025b722f2a15c7ba2521/hopper-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Метеостанция (Weathercaster)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltca11948c05961e33/5f8802c725a3fc0c1a86b350/rain-of-shine-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Базовая тележка (Driving Base)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blte58422fa7d508a60/5f8802b882eaa522ca601c9f/driving-base-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Захваты (Grabbers)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt56a81c75560c9a81/5f8802cbf71916144453a493/supercleaup-bi-pdf-book1of3.pdf?locale=en-us" },
-              { name: "Носорог (Rhino)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt990212b2cd50c4d3/5f88025fbc43790f5c4389ee/going-the-distance-bi-pdf-book1of2.pdf?locale=en-us" },
-              { name: "Робот-рука (Robot Hand)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltd34f6e501eb5ff30/5f8802b8bf5ab07ee90076df/pass-the-brick-bi-pdf-book1of1.pdf?locale=en-us" },
-              { name: "Сейф (Safe-Deposit Box)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt3ee6ec3b5bb66752/5f88027b69efd81ab4debf10/keep-ti-safe-bi-pdf-book1of2.pdf?locale=en-us" },
-              { name: "ЧПУ-станок (CNC Machine)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltf2bad60f3bd4d67a/5f88027ded5ccb12e4342da0/broken-bi-pdf-book1of2.pdf?locale=en-us" },
-              { name: "Сортировщик (Package Sorter)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltebfffd33fc0a5e72/5f8802a1bc43790f5c4389f2/automate-it-bi-pdf-book1of3.pdf?locale=en-us" },
+              { name: "Танцор (Break Dancer)", difficulty: "Начальный", pdf: "/pdfs/spike_break_dancer.pdf" },
+              { name: "Тренер (The Coach)", difficulty: "Начальный", pdf: "/pdfs/spike_coach.pdf" },
+              { name: "Собачка Кики (Kiki)", difficulty: "Начальный", pdf: "/pdfs/spike_kiki.pdf" },
+              { name: "Прыгун (Hopper)", difficulty: "Начальный", pdf: "/pdfs/spike_hopper.pdf" },
+              { name: "Метеостанция (Weathercaster)", difficulty: "Средний", pdf: "/pdfs/spike_weathercaster.pdf" },
+              { name: "Базовая тележка (Driving Base)", difficulty: "Средний", pdf: "/pdfs/spike_driving_base.pdf" },
+              { name: "Захваты (Grabbers)", difficulty: "Средний", pdf: "/pdfs/spike_grabbers.pdf" },
+              { name: "Носорог (Rhino)", difficulty: "Продвинутый", pdf: "/pdfs/spike_rhino.pdf" },
+              { name: "Робот-рука (Robot Hand)", difficulty: "Продвинутый", pdf: "/pdfs/spike_robot_hand.pdf" },
+              { name: "Сейф (Safe-Deposit Box)", difficulty: "Продвинутый", pdf: "/pdfs/spike_safe.pdf" },
+              { name: "ЧПУ-станок (CNC Machine)", difficulty: "Продвинутый", pdf: "/pdfs/spike_cnc_machine.pdf" },
+              { name: "Сортировщик (Package Sorter)", difficulty: "Продвинутый", pdf: "/pdfs/spike_package_sorter.pdf" },
             ].map((build, i) => (
               <a
                 key={i}

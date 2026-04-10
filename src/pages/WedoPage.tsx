@@ -243,18 +243,18 @@ const WedoPage = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { name: "Улитка (Snail)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltafe88d4b265016a7/5f88034625a3fc0c1a86b36a/45300_easystart_m1_.pdf?locale=en-us" },
-              { name: "Вентилятор (Fan)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt0cf713e7b10b3ca9/5f88036518bf360ec7ca88a3/45300_easystart_m2_.pdf?locale=en-us" },
-              { name: "Спутник (Satellite)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltc3964f8e669d8071/5f88033d25f8972408a02ff4/45300_easystart_m3_.pdf?locale=en-us" },
-              { name: "Робот-шпион (Spy Robot)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt36c5008089ab3a1d/5f8803461e95ad78fa1e8bcc/45300_easystart_m4_.pdf?locale=en-us" },
-              { name: "Майло (MILO)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt93919edff44b5450/5f88037fb8b59a77a945d172/45300_16_milo.pdf?locale=en-us" },
-              { name: "Гоночная машина (Race Car)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blte7a599838deb6c44/5f880329b74e541ab55846f0/45300_02a_race_car.pdf?locale=en-us" },
-              { name: "Землетрясение (Earthquake)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt545ada040e1dbb07/5f880329d041c37a4af706a8/45300_03a_earthquake.pdf?locale=en-us" },
-              { name: "Вертолёт (Helicopter)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltfca247efe00b6955/5f88038069efd81ab4debf32/45300_7a_helicopter.pdf?locale=en-us" },
-              { name: "Робот-рука (Robotic Arm)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt31b1c4b8bee378c6/5f8803240fa6ca0be8c8d3cf/45300_09a_robotic_arm.pdf?locale=en-us" },
-              { name: "Цветок (Flower)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt89f32f0cdb22d609/5f88032e631d5a2165df412e/45300_05a_flower.pdf?locale=en-us" },
-              { name: "Захват (Grab)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt34e9f8b57fabbb1a/5f88032b83a36a1be55e9c10/45300_09_grab.pdf?locale=en-us" },
-              { name: "Луноход (Luna Rover)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt93f5125c1d1251c0/5f880346c7a3ba77aa91cc1e/45300_16a_luna_rover.pdf?locale=en-us" },
+              { name: "Улитка (Snail)", difficulty: "Начальный", pdf: "/pdfs/wedo_snail.pdf" },
+              { name: "Вентилятор (Fan)", difficulty: "Начальный", pdf: "/pdfs/wedo_fan.pdf" },
+              { name: "Спутник (Satellite)", difficulty: "Начальный", pdf: "/pdfs/wedo_satellite.pdf" },
+              { name: "Робот-шпион (Spy Robot)", difficulty: "Начальный", pdf: "/pdfs/wedo_spy_robot.pdf" },
+              { name: "Майло (MILO)", difficulty: "Средний", pdf: "/pdfs/wedo_milo.pdf" },
+              { name: "Гоночная машина (Race Car)", difficulty: "Средний", pdf: "/pdfs/wedo_race_car.pdf" },
+              { name: "Землетрясение (Earthquake)", difficulty: "Средний", pdf: "/pdfs/wedo_earthquake.pdf" },
+              { name: "Вертолёт (Helicopter)", difficulty: "Средний", pdf: "/pdfs/wedo_helicopter.pdf" },
+              { name: "Робот-рука (Robotic Arm)", difficulty: "Продвинутый", pdf: "/pdfs/wedo_robotic_arm.pdf" },
+              { name: "Цветок (Flower)", difficulty: "Средний", pdf: "/pdfs/wedo_flower.pdf" },
+              { name: "Захват (Grab)", difficulty: "Средний", pdf: "/pdfs/wedo_grab.pdf" },
+              { name: "Луноход (Luna Rover)", difficulty: "Продвинутый", pdf: "/pdfs/wedo_luna_rover.pdf" },
             ].map((build, i) => (
               <a
                 key={i}
