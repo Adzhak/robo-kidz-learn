@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Package, Cpu, BookOpen, Wrench, CheckCircle2, Cog, Bluetooth, Gauge, Code2, Play, RotateCcw, Volume2, Timer, MousePointer } from "lucide-react";
+import { ArrowLeft, Package, Cpu, BookOpen, Wrench, CheckCircle2, Cog, Bluetooth, Gauge, Code2, Play, RotateCcw, Volume2, Timer, MousePointer, ExternalLink } from "lucide-react";
 import wedoIcon from "@/assets/wedo-icon.png";
 
 const tabData = [
@@ -243,26 +243,41 @@ const WedoPage = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { name: "Майло — научный вездеход", difficulty: "Начальный" },
-              { name: "Тяга", difficulty: "Начальный" },
-              { name: "Гоночная машина", difficulty: "Средний" },
-              { name: "Вентилятор", difficulty: "Начальный" },
-              { name: "Землетрясение", difficulty: "Средний" },
-              { name: "Робот-лягушка", difficulty: "Продвинутый" },
+              { name: "Улитка (Snail)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltafe88d4b265016a7/5f88034625a3fc0c1a86b36a/45300_easystart_m1_.pdf?locale=en-us" },
+              { name: "Вентилятор (Fan)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt0cf713e7b10b3ca9/5f88036518bf360ec7ca88a3/45300_easystart_m2_.pdf?locale=en-us" },
+              { name: "Спутник (Satellite)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltc3964f8e669d8071/5f88033d25f8972408a02ff4/45300_easystart_m3_.pdf?locale=en-us" },
+              { name: "Робот-шпион (Spy Robot)", difficulty: "Начальный", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt36c5008089ab3a1d/5f8803461e95ad78fa1e8bcc/45300_easystart_m4_.pdf?locale=en-us" },
+              { name: "Майло (MILO)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt93919edff44b5450/5f88037fb8b59a77a945d172/45300_16_milo.pdf?locale=en-us" },
+              { name: "Гоночная машина (Race Car)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blte7a599838deb6c44/5f880329b74e541ab55846f0/45300_02a_race_car.pdf?locale=en-us" },
+              { name: "Землетрясение (Earthquake)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt545ada040e1dbb07/5f880329d041c37a4af706a8/45300_03a_earthquake.pdf?locale=en-us" },
+              { name: "Вертолёт (Helicopter)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltfca247efe00b6955/5f88038069efd81ab4debf32/45300_7a_helicopter.pdf?locale=en-us" },
+              { name: "Робот-рука (Robotic Arm)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt31b1c4b8bee378c6/5f8803240fa6ca0be8c8d3cf/45300_09a_robotic_arm.pdf?locale=en-us" },
+              { name: "Цветок (Flower)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt89f32f0cdb22d609/5f88032e631d5a2165df412e/45300_05a_flower.pdf?locale=en-us" },
+              { name: "Захват (Grab)", difficulty: "Средний", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt34e9f8b57fabbb1a/5f88032b83a36a1be55e9c10/45300_09_grab.pdf?locale=en-us" },
+              { name: "Луноход (Luna Rover)", difficulty: "Продвинутый", pdf: "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt93f5125c1d1251c0/5f880346c7a3ba77aa91cc1e/45300_16a_luna_rover.pdf?locale=en-us" },
             ].map((build, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-5 hover:shadow-md transition-shadow group cursor-pointer">
+              <a
+                key={i}
+                href={build.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-border bg-card p-5 hover:shadow-md transition-shadow group cursor-pointer block"
+              >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:bg-primary/20 transition-colors">
                   <Wrench className="w-5 h-5" />
                 </div>
                 <h3 className="font-display font-bold text-foreground text-sm">{build.name}</h3>
-                <span className={`inline-block mt-2 text-xs font-medium px-2 py-0.5 rounded-full ${
-                  build.difficulty === "Начальный" ? "bg-accent/20 text-accent" :
-                  build.difficulty === "Средний" ? "bg-secondary/20 text-secondary" :
-                  "bg-destructive/20 text-destructive"
-                }`}>
-                  {build.difficulty}
-                </span>
-              </div>
+                <div className="flex items-center justify-between mt-2">
+                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                    build.difficulty === "Начальный" ? "bg-accent/20 text-accent" :
+                    build.difficulty === "Средний" ? "bg-secondary/20 text-secondary" :
+                    "bg-destructive/20 text-destructive"
+                  }`}>
+                    {build.difficulty}
+                  </span>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+              </a>
             ))}
           </div>
         </section>
