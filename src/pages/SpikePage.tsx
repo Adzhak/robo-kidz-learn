@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Package, Cpu, BookOpen, Wrench, CheckCircle2, Cog, Bluetooth, Gauge, Zap, Code2, Play, RotateCcw, Variable, Braces, GitBranch, Repeat, Terminal } from "lucide-react";
+import { ArrowLeft, Package, Cpu, BookOpen, Wrench, CheckCircle2, Cog, Bluetooth, Gauge, Zap, Code2, Play, RotateCcw, Variable, Braces, GitBranch, Repeat, Terminal, ExternalLink } from "lucide-react";
 import spikeIcon from "@/assets/spike-icon.png";
 
 const SpikePage = () => {
